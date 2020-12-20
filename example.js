@@ -20,10 +20,13 @@ const puppeteer = require('puppeteer');
       return t.innerText
     })
 
+    // Ai você pega os outros da página aqui também e retorna, pra retornar pro node
+    // Lembrando que você ta no contexto do Chrome aqui, um console.log aqui seria exibido no console do chrome e não no terminal
     
     return titles
   });
 
+  // Imprime os dados no node
   console.log(pageData)
 
   await browser.close()
